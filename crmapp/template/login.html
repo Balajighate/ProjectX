@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+<body>
+    {% block content%}
+
+        <div class="container bg-light shadow-md p-5 form-layout">
+
+            <h1>Login to your Account</h1>
+
+            <hr>
+            <br>
+
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+
+                {{form.as_p}}
+                <br>
+                <br>
+
+                <a href="{% url 'login' %}">Refresh Captcha</a>
+
+                <button type="submit" class="btn-btn-primary w-50 btn-block p-2">
+                    Login &nbsp; <i class="fa-solid fa-key"></i>
+                </button>
+
+            </form>
+            <br>
+
+            <div class="text-left">
+
+                <p>Don't have an Account??</p>
+                <a href="{% url 'register' %}">Register</a>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+    {%endblock%}
+
+    
+</body>
+</html>

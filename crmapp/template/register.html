@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectX</title>
+</head>
+{% block content%}
+<body>
+    
+    <div class="container bg-light shadow-md p5 form-layout">
+
+        <h3>Create Your Account</h3>
+
+        <h5> Start Managing Your Clients Today </h5>
+
+        <br>
+        <hr>
+
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <br>
+            <br>
+
+            <button class="text-center" type="submit" class="btn-btn-primary m-100 btn-block">
+                Create Account &nbsp; <i class="fa-solid fa-user-plus"></i>
+            </button>
+
+        </form>
+
+        <div>
+            <p>Already Register</p>
+            <a href="{% url 'login' %}">Sign in</a>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+{% endblock %}
+</html>

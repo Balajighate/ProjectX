@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectX</title>
+</head>
+<body>
+    {% block content %}
+
+    <br>
+    <br>
+
+    <div class="text-center">
+
+        <h1>Project CRM Management</h1>  
+        
+        <br>
+
+        <h5>Keep Track of your Records Effectively</h5>
+
+        <hr>
+        <br>
+
+        <a class="btn btn-primary" type="button" href="{% url 'register' %}">Create Your Account &nbsp; 
+            <i class="fa-solid fa-user-plus"></i></a>
+        </a>
+
+
+
+
+
+
+    </div>
+    
+
+    {% endblock %}
+
+</body>
+</html>
